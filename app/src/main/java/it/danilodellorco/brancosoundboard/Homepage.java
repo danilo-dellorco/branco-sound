@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class Homepage extends AppCompatActivity {
 
@@ -15,7 +16,8 @@ public class Homepage extends AppCompatActivity {
         ImageButton btnLuca;
         Context context;
 
-        public void Holder(){
+        public Holder(){
+
             context = getApplicationContext();
             btnLuca = findViewById(R.id.btnLuca);
             btnLuca.setOnClickListener(this);
@@ -23,11 +25,12 @@ public class Homepage extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if (v.getId() == R.id.btnLuca){
-                Intent i = new Intent( Homepage.this , MainActivity.class);
+            Intent i = new Intent( Homepage.this , MainActivity.class);
+            i.putExtra("Nome","Panilallo");
+            i.putExtra("Array",R.array.Panilallo);
+            i.putExtra("Foto",R.drawable.panilallo);
 
-                startActivity (i);
-            }
+            startActivity (i);
         }
     }
 
@@ -35,5 +38,6 @@ public class Homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        Holder holder = new Holder();
     }
 }

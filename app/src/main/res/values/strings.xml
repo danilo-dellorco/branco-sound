@@ -5,10 +5,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string-array name="Luca">
-        <item> incoerenza </item>
-        <item> fatti_una_vita_sociale </item>
-        <item> me_ne_sbatto </item>
-        <item> tu_fa_che_nt_agghiappo </item>
+    <string-array name="Panilallo">
+        <!--1--> <item> Incoerenza </item>
+        <!--2--> <item> Ma fatti una vita sociale </item>
+        <!--3--> <item> Me ne sbatto </item>
+        <!--4--> <item> Tu fa che nt agghiappo </item>
+        <!--5--> <item> Top of the Pops </item>
     </string-array>
 </resources>
