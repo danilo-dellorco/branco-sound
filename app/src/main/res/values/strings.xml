@@ -11,5 +11,115 @@
         <!--3--> <item> Me ne sbatto </item>
         <!--4--> <item> Tu fa che nt agghiappo </item>
         <!--5--> <item> Top of the Pops </item>
+        <!--6--> <item> Non serve che mi ripeto </item>
+        <!--7--> <item> Pecora ma non porc </item>
     </string-array>
+
+    <string-array name="Diup">
+        <!--1--> <item> Ma chi cazzo sei tu </item>
+        <!--2--> <item> Ogni volta che sto a fa l audio </item>
+        <!--3--> <item> So tost </item>
+        <!--4--> <item> Suit </item>
+        <!--5--> <item> Paura del buio </item>
+        <!--6--> <item> A far la sghiscia comincia tu </item>
+        <!--7--> <item> La tua voce al mattino </item>
+    </string-array>
+
+    <string-array name="Marasma">
+        <!--1--> <item> Alteratouh </item>
+        <!--2--> <item> Mpicciati assai </item>
+        <!--3--> <item> Tra ubriaco e brillo </item>
+    </string-array>
+
+    <string-array name="Pixinho">
+        <!--1--> <item> Billy n quadro te </item>
+        <!--2--> <item> Ciiiro Iiiimmobilee </item>
+        <!--3--> <item> Oh ma pensat a ficca </item>
+        <!--4--> <item> Pica non perdona mai </item>
+        <!--5--> <item> Stirata risolutiva </item>
+        <!--6--> <item> UAOOOHOHOAHA </item>
+    </string-array>
+
+    <string-array name="Pasonzio">
+        <!--1--> <item> Istruzione </item>
+        <!--2--> <item> Stupidoo </item>
+        <!--3--> <item> Begli uttr </item>
+        <!--4--> <item> La cosa piu bella che ci possa esistere </item>
+        <!--5--> <item> Non ci mporta ncazz </item>
+        <!--6--> <item> E NOOOOH </item>
+        <!--7--> <item> E devi studiare </item>
+        <!--8--> <item> Cimelio </item>
+        <!--9--> <item> Du sveglie ai muss </item>
+        <!--0--> <item> Tutte le qualita p fall </item>
+        <!--1--> <item> Mannala mannala mannala </item>
+        <!--2--> <item> Zio piooo </item>
+        <!--3--> <item> Ti conosco da na vita </item>
+        <!--4--> <item> Ao, porca maria </item>
+        <!--5--> <item> Tu si poc serio </item>
+    </string-array>
+
+    <string-array name="Conca">
+        <!--1--> <item> Cetriolo ortolano </item>
+        <!--2--> <item> Rubo le alici </item>
+        <!--3--> <item> Sempre chess </item>
+        <!--4--> <item> Roma-Barca </item>
+        <!--5--> <item> Kostaaaaaaasss </item>
+        <!--6--> <item> Semifinale cempionsliigz </item>
+    </string-array>
+
+    <string-array name="Qarocochi">
+        <!--1--> <item> Andicappato forte </item>
+        <!--2--> <item> Sempre sotto arriverete </item>
+        <!--3--> <item> Volan gli schiaffi </item>
+        <!--4--> <item> Percentuali ben divise </item>
+        <!--5--> <item> Imparati il rispetto </item>
+        <!--6--> <item> E iami porcodio </item>
+        <!--7--> <item> Daniloooooo </item>
+        <!--8--> <item> Aoaoaoao sghiscia </item>
+        <!--9--> <item> Ora di finirla </item>
+    </string-array>
+
+    <string-array name="Trulli">
+        <!--1--> <item> Le foto merde </item>
+        <!--2--> <item> Aooo porcoddio </item>
+        <!--3--> <item> Trulli hartman </item>
+        <!--4--> <item> Specie de stupido </item>
+        <!--5--> <item> Pregata di uscire zoccola </item>
+        <!--6--> <item> Caca nmocca </item>
+    </string-array>
+
+    <string-array name="Presidente">
+        <!--1--> <item> Il presidente il pres </item>
+        <!--2--> <item> Il preeeees </item>
+        <!--3--> <item> Il presideeente </item>
+        <!--4--> <item> Ladro </item>
+        <!--5--> <item> TPLC </item>
+        <!--6--> <item> Iiiiiiil </item>
+        <!--6--> <item> Canzoncina al ladro </item>
+        <!--6--> <item> Swipe up 1 </item>
+    </string-array>
+
+    <string-array name="Zombi">
+        <!--1--> <item> Iatv zic a diverti </item>
+        <!--2--> <item> Cornetto </item>
+        <!--3--> <item> Ue signo </item>
+        <!--4--> <item> Scureggia </item>
+        <!--5--> <item> Risata 1 </item>
+        <!--6--> <item> Risata 2 </item>
+        <!--7--> <item> Risata 3 </item>
+        <!--8--> <item> Risata 4 </item>
+        <!--9--> <item> Risata 5 </item>
+    </string-array>
+
+    <string-array name="Dottore">
+        <!--1--> <item> Rospi d macchia </item>
+        <!--2--> <item> STOOOPPA </item>
+        <!--3--> <item> Volevo dirti tante cose </item>
+    </string-array>
+
+
+
+
+
+
 </resources>

@@ -1,9 +1,13 @@
 package it.danilodellorco.brancosoundboard;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +20,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -25,15 +30,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    MediaPlayer mp;
+    int PERMISSION;
 
     public class holder implements View.OnClickListener{
         ListView listView;
         ImageView imageView;
         TextView tvName;
-        MediaPlayer mp;
         Button btnStop;
-        String name = getIntent().getStringExtra("Nome");
 
         public holder(){
             int array = getIntent().getIntExtra("Array",0);
@@ -58,19 +62,20 @@ public class MainActivity extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    String selectedItem = listView.getItemAtPosition(position).toString();
                     String pos = Integer.toString(position+1);
-                    Log.v ("MAP","raw/"+name+"_"+pos);
-                    int resId = getResources().getIdentifier("raw/"+"panilallo"+"_"+pos, null, context.getPackageName());
+                    //Log.v ("MAP","raw/"+getIntent().getStringExtra("Nome")+"_"+pos);
+                    String author = getIntent().getStringExtra("Nome").toLowerCase();
+                    int resId = getResources().getIdentifier("raw/"+author+"_"+pos, null, context.getPackageName());
                     musicPlay(resId);
                 }
             });
 
             listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
-                public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int pos, long id) {
-                    String selectedItem = listView.getItemAtPosition(pos).toString();
-                    int resId = getResources().getIdentifier("raw/"+selectedItem, null, context.getPackageName());
+                public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position, long id) {
+                    String author = getIntent().getStringExtra("Nome").toLowerCase();
+                    String pos = Integer.toString(position+1);
+                    int resId = getResources().getIdentifier("raw/"+author+"_"+pos, null, context.getPackageName());
                     musicShare(resId);
                     return true;
                 }
@@ -124,7 +129,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-            public void musicShare(int sound) {
+        public void musicShare(int sound) {
+            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                Toast toast = Toast.makeText(MainActivity.this,"Non hai concesso i permessi per condividere i file",Toast.LENGTH_LONG);
+                toast.show();
+                return;
+            }
             String path = Environment.getExternalStorageDirectory() + "/branco";
             String name = getResources().getResourceEntryName(sound);
             String filePath = path + File.separator + name + ".mp3";
@@ -147,7 +158,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         holder holder = new holder();
-        holder.tvName.setText(holder.name);
+        holder.tvName.setText(getIntent().getStringExtra("Nome"));
         holder.imageView.setImageResource(getIntent().getIntExtra("Foto",0));
+    }
+    @Override
+    public void onBackPressed() {
+        if (mp.isPlaying()){
+            mp.stop();
+        }
+        finish();
     }
 }

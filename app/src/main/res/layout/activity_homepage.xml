@@ -53,10 +53,12 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                    android:id="@+id/btnDiup"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="0" />
+                        android:id="@+id/btnDiup"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/diup" />
 
                     <TextView
                     android:id="@+id/textView2"
@@ -84,7 +86,8 @@
                         android:id="@+id/btnPica"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pix" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -104,7 +107,9 @@
                         android:id="@+id/btnQaro"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_weight="0" />
+                        android:scaleType="fitCenter"
+                        android:layout_weight="0"
+                        android:src="@drawable/qaro" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -133,7 +138,8 @@
                         android:id="@+id/btnTrulli"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/trulli" />
 
                     <TextView
                         android:id="@+id/tv5"
@@ -150,10 +156,12 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/Conca"
+                        android:id="@+id/btnConca"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_weight="0" />
+                        android:layout_weight="0"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/conca" />
 
                     <TextView
                         android:id="@+id/tv3"
@@ -181,7 +189,8 @@
                         android:id="@+id/btnPres"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pres" />
 
                     <TextView
                         android:id="@+id/tv2"
@@ -200,7 +209,9 @@
                         android:id="@+id/btnMarasma"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_weight="0" />
+                        android:layout_weight="0"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/marasma" />
 
                     <TextView
                         android:id="@+id/tv"
@@ -228,7 +239,8 @@
                         android:id="@+id/btnZombi"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/zombi" />
 
                     <TextView
                         android:id="@+id/tv33"
@@ -247,7 +259,9 @@
                         android:id="@+id/btnDoc"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_weight="0" />
+                        android:layout_weight="0"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/doc" />
 
                     <TextView
                         android:id="@+id/tvv"
@@ -270,16 +284,18 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btnVari"
+                        android:id="@+id/btnPasonzio"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:layout_weight="0" />
+                        android:layout_weight="0"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pasonzio" />
 
                     <TextView
                         android:id="@+id/vari"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Vari" />
+                        android:text="Pasonzio" />
                 </LinearLayout>
 
             </LinearLayout>
