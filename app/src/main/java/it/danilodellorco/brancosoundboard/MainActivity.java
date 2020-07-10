@@ -22,6 +22,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listView;
         ImageView imageView;
         TextView tvName;
-        Button btnStop;
+        FloatingActionButton btnStop;
 
         public holder(){
             int array = getIntent().getIntExtra("Array",0);

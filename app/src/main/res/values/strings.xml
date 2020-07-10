@@ -13,6 +13,7 @@
         <!--5--> <item> Top of the Pops </item>
         <!--6--> <item> Non serve che mi ripeto </item>
         <!--7--> <item> Pecora ma non porc </item>
+        <!--7--> <item> Pastore </item>
     </string-array>
 
     <string-array name="Diup">
@@ -23,6 +24,8 @@
         <!--5--> <item> Paura del buio </item>
         <!--6--> <item> A far la sghiscia comincia tu </item>
         <!--7--> <item> La tua voce al mattino </item>
+        <!--8--> <item> Barcellona </item>
+        <!--9--> <item> Trulli ta pozzi cicatte </item>
     </string-array>
 
     <string-array name="Marasma">
@@ -68,15 +71,16 @@
     </string-array>
 
     <string-array name="Qarocochi">
-        <!--1--> <item> Andicappato forte </item>
-        <!--2--> <item> Sempre sotto arriverete </item>
-        <!--3--> <item> Volan gli schiaffi </item>
-        <!--4--> <item> Percentuali ben divise </item>
-        <!--5--> <item> Imparati il rispetto </item>
-        <!--6--> <item> E iami porcodio </item>
-        <!--7--> <item> Daniloooooo </item>
-        <!--8--> <item> Aoaoaoao sghiscia </item>
-        <!--9--> <item> Ora di finirla </item>
+        <!-- 1--> <item> Andicappato forte </item>
+        <!-- 2--> <item> Sempre sotto arriverete </item>
+        <!-- 3--> <item> Volan gli schiaffi </item>
+        <!-- 4--> <item> Percentuali ben divise </item>
+        <!-- 5--> <item> Imparati il rispetto </item>
+        <!-- 6--> <item> E iami porcodio </item>
+        <!-- 7--> <item> Daniloooooo </item>
+        <!-- 8--> <item> Aoaoaoao sghiscia </item>
+        <!-- 9--> <item> Ora di finirla </item>
+        <!--10--> <item> Bimba: Ladro </item>
     </string-array>
 
     <string-array name="Trulli">
@@ -86,17 +90,28 @@
         <!--4--> <item> Specie de stupido </item>
         <!--5--> <item> Pregata di uscire zoccola </item>
         <!--6--> <item> Caca nmocca </item>
+        <!--7--> <item> Biondino </item>
+        <!--8--> <item> Cucciolo di panda </item>
     </string-array>
 
     <string-array name="Presidente">
-        <!--1--> <item> Il presidente il pres </item>
-        <!--2--> <item> Il preeeees </item>
-        <!--3--> <item> Il presideeente </item>
-        <!--4--> <item> Ladro </item>
-        <!--5--> <item> TPLC </item>
-        <!--6--> <item> Iiiiiiil </item>
-        <!--6--> <item> Canzoncina al ladro </item>
-        <!--6--> <item> Swipe up 1 </item>
+        <!-- 1--> <item> Il presidente il pres </item>
+        <!-- 2--> <item> Il preeeees </item>
+        <!-- 3--> <item> Il presideeente </item>
+        <!-- 4--> <item> Ladro </item>
+        <!-- 5--> <item> TPLC </item>
+        <!-- 6--> <item> Iiiiiiil </item>
+        <!-- 7--> <item> Canzoncina al ladro </item>
+        <!-- 8--> <item> Swipe up 1 </item>
+        <!-- 9--> <item> Swipe up 2 </item>
+        <!--10--> <item> Swipe up 3 </item>
+        <!--11--> <item> Swipe up 4 </item>
+        <!--12--> <item> Swipe up 5 </item>
+        <!--13--> <item> Le Presidont 1 </item>
+        <!--14--> <item> Le Presidont 2 </item>
+        <!--15--> <item> Devlet Baskn </item>
+        <!--16--> <item> Lunghissimo 1 </item>
+        <!--17--> <item> Lunghissimo 2 </item>
     </string-array>
 
     <string-array name="Zombi">
@@ -121,5 +136,54 @@
 
 
 
+
+    <!--                 NUOVI                -->
+
+    <string-array name="Six">
+        <!--1--> <item> Amaro e Limoncello </item>
+        <!--2--> <item> So morto qua </item>
+    </string-array>
+
+    <string-array name="Egno">
+        <!--1--> <item> Ma che cazz vo </item>
+        <!--2--> <item> Rap quarantena </item>
+        <!--3--> <item> Solo come un cane </item>
+    </string-array>
+
+    <string-array name="Giansy">
+        <!--1--> <item> Attaccate ar cazzo </item>
+        <!--2--> <item> Ih Oh Miao </item>
+        <!--3--> <item> Il profumo della vetta </item>
+        <!--3--> <item> Immobile </item>
+        <!--3--> <item> La macchinetta non me la porto </item>
+    </string-array>
+
+    <string-array name="Sugamosto">
+        <!--1--> <item> Bigliettini </item>
+        <!--2--> <item> Indecifrabile </item>
+        <!--3--> <item> Complimenti </item>
+    </string-array>
+
+    <string-array name="Vasselli">
+        <!--1--> <item> Petto di pollo </item>
+        <!--2--> <item> Suona la tromba </item>
+        <!--3--> <item> Stasera suishushsh </item>
+    </string-array>
+
+    <string-array name="Leone">
+        <!--1--> <item> Iam Ben </item>
+        <!--2--> <item> Salve a tutti </item>
+        <!--3--> <item> Fatta seria </item>
+        <!--3--> <item> Sistooo </item>
+        <!--3--> <item> T so capit </item>
+        <!--3--> <item> Tu n stai ben </item>
+        <!--3--> <item> Remix </item>
+    </string-array>
+
+    <string-array name="Oroli">
+        <!--1--> <item> Super perforante </item>
+        <!--2--> <item> Toll n pezz</item>
+        <!--3--> <item> Pizzitt </item>
+    </string-array>
 
 </resources>

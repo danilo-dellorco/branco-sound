@@ -9,7 +9,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -57,8 +60,8 @@
                         android:id="@+id/btnDiup"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/button_bg_round"
                         android:layout_weight="0"
+                        android:background="@drawable/button_bg_round"
                         android:scaleType="fitCenter"
                         android:src="@drawable/diup" />
 
@@ -89,8 +92,8 @@
                         android:id="@+id/btnPica"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:scaleType="fitCenter"
                         android:background="@drawable/button_bg_round"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/pix" />
 
                     <TextView
@@ -111,8 +114,8 @@
                         android:id="@+id/btnQaro"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/button_bg_round"
                         android:layout_weight="0"
+                        android:background="@drawable/button_bg_round"
                         android:scaleType="fitCenter"
                         android:src="@drawable/qaro" />
 
@@ -142,8 +145,8 @@
                     <ImageButton
                         android:id="@+id/btnTrulli"
                         android:layout_width="150dp"
-                        android:background="@drawable/button_bg_round"
                         android:layout_height="150dp"
+                        android:background="@drawable/button_bg_round"
                         android:scaleType="fitCenter"
                         android:src="@drawable/trulli" />
 
@@ -218,8 +221,8 @@
                         android:id="@+id/btnMarasma"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/button_bg_round"
                         android:layout_weight="0"
+                        android:background="@drawable/button_bg_round"
                         android:scaleType="fitCenter"
                         android:src="@drawable/marasma" />
 
@@ -271,8 +274,8 @@
                         android:id="@+id/btnDoc"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/button_bg_round"
                         android:layout_weight="0"
+                        android:background="@drawable/button_bg_round"
                         android:scaleType="fitCenter"
                         android:src="@drawable/doc" />
 
@@ -301,8 +304,8 @@
                         android:id="@+id/btnPasonzio"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/button_bg_round"
                         android:layout_weight="0"
+                        android:background="@drawable/button_bg_round"
                         android:scaleType="fitCenter"
                         android:src="@drawable/pasonzio" />
 
