@@ -2,6 +2,7 @@ package it.danilodellorco.brancosoundboard;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
@@ -32,7 +33,9 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class AudioActivity extends AppCompatActivity {
+    static int WRITE_EXTERNAL_STORAGE = 1;
     MediaPlayer mp;
 
     public class holder implements View.OnClickListener,BottomNavigationView.OnNavigationItemSelectedListener {
@@ -83,7 +86,13 @@ public class AudioActivity extends AppCompatActivity {
                 @Override
                 public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position, long id) {
                     String author = getIntent().getStringExtra("Nome").toLowerCase();
-                    String pos = Integer.toString(position+1);
+                    String pos;
+                    if (position >= 9) {
+                        pos = Integer.toString(position + 1);
+                    }
+                    else {
+                        pos = "0" + Integer.toString(position + 1);
+                    }
                     int resId = getResources().getIdentifier("raw/"+author+"_"+pos, null, context.getPackageName());
                     musicShare(resId);
                     return true;
@@ -146,6 +155,7 @@ public class AudioActivity extends AppCompatActivity {
         public void musicShare(int sound) {
             if (ContextCompat.checkSelfPermission(AudioActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(AudioActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_STORAGE);
                 Toast toast = Toast.makeText(AudioActivity.this,"Non hai concesso i permessi per condividere i file",Toast.LENGTH_LONG);
                 toast.show();
                 return;
