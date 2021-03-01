@@ -1,7 +1,7 @@
 package it.danilodellorco.brancosoundboard;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
@@ -13,15 +13,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
@@ -31,15 +32,15 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class AudioActivity extends AppCompatActivity {
     MediaPlayer mp;
-    int PERMISSION;
 
-    public class holder implements View.OnClickListener{
+    public class holder implements View.OnClickListener,BottomNavigationView.OnNavigationItemSelectedListener {
         ListView listView;
         ImageView imageView;
         TextView tvName;
         FloatingActionButton btnStop;
+        BottomNavigationView navBar;
 
         public holder(){
             int array = getIntent().getIntExtra("Array",0);
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
             mp = new MediaPlayer();
             listView = findViewById(R.id.listView);
+
             /// Getting list of Strings from your resource
             String[] testArray = getResources().getStringArray(array);
             List<String> testList = Arrays.asList(testArray);
@@ -64,8 +66,13 @@ public class MainActivity extends AppCompatActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    String pos = Integer.toString(position+1);
-                    //Log.v ("MAP","raw/"+getIntent().getStringExtra("Nome")+"_"+pos);
+                    String pos;
+                    if (position >= 9) {
+                        pos = Integer.toString(position + 1);
+                    }
+                    else {
+                        pos = "0" + Integer.toString(position + 1);
+                    }
                     String author = getIntent().getStringExtra("Nome").toLowerCase();
                     int resId = getResources().getIdentifier("raw/"+author+"_"+pos, null, context.getPackageName());
                     musicPlay(resId);
@@ -82,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             });
+
+            navBar = findViewById(R.id.nav_view);
+            navBar.setSelectedItemId(R.id.navigation_audio);
+            navBar.setOnNavigationItemSelectedListener(this);
+
         }
 
 
@@ -132,9 +144,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void musicShare(int sound) {
-            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            if (ContextCompat.checkSelfPermission(AudioActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
-                Toast toast = Toast.makeText(MainActivity.this,"Non hai concesso i permessi per condividere i file",Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(AudioActivity.this,"Non hai concesso i permessi per condividere i file",Toast.LENGTH_LONG);
                 toast.show();
                 return;
             }
@@ -152,13 +164,48 @@ public class MainActivity extends AppCompatActivity {
             sharingIntent.setType("audio/mp3");
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
         }
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            int id = menuItem.getItemId();
+            Intent intent;
+
+            if (id == R.id.navigation_audio){
+                if (mp.isPlaying()) {
+                    mp.stop();
+                }
+                intent = new Intent(AudioActivity.this, AudioTabActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+                finish();
+            }
+
+            if (id == R.id.navigation_video){
+                if (mp.isPlaying()) {
+                    mp.stop();
+                }
+                intent = new Intent(AudioActivity.this,VideoTabActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+                finish();
+            }
+
+            if (id == R.id.navigation_frasi){
+                if (mp.isPlaying()) {
+                    mp.stop();
+                }
+                //nothing
+            }
+
+            return false;
+        }
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_audiolist);
         holder holder = new holder();
         holder.tvName.setText(getIntent().getStringExtra("Nome"));
         holder.imageView.setImageResource(getIntent().getIntExtra("Foto",0));
